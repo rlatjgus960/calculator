@@ -135,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.btnCe:
                         Log.d("javaStudy", "btn0 버튼 클릭"+R.id.btnCe);
-                        str += btnCe.getText().toString();
                         str = "";
                         result.setText(str);
                         break;
