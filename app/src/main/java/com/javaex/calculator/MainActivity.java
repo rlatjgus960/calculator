@@ -142,25 +142,27 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.btnEq:
                         Log.d("javaStudy", "btn0 버튼 클릭"+R.id.btnEq);
 
-                        int cal = 0;
+                        double cal = 0;
 
                         if(str.contains("+")) {
                             String[] spl = str.split("\\+");
-                            cal = Integer.parseInt(spl[0]) + Integer.parseInt(spl[1]);
+                            cal = (double)Integer.parseInt(spl[0]) + (double)Integer.parseInt(spl[1]);
                         }else if(str.contains("-")) {
                             String[] spl = str.split("-");
-                            cal = Integer.parseInt(spl[0]) - Integer.parseInt(spl[1]);
+                            cal = (double)Integer.parseInt(spl[0]) - (double)Integer.parseInt(spl[1]);
                         }else if(str.contains("*")) {
                             String[] spl = str.split("\\*");
-                            cal = Integer.parseInt(spl[0]) * Integer.parseInt(spl[1]);
+                            cal = (double)Integer.parseInt(spl[0]) * (double)Integer.parseInt(spl[1]);
                         }else if(str.contains("/")) {
                             String[] spl = str.split("/");
-                            cal = Integer.parseInt(spl[0]) / Integer.parseInt(spl[1]);
+                            cal = (double)Integer.parseInt(spl[0]) / (double)Integer.parseInt(spl[1]);
                         }
 
-                        str += btnEq.getText().toString() + cal;
+                        str = "" + cal;
 
                         result.setText(str);
+
+                        str = "";
 
                         break;
 
